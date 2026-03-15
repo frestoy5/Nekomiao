@@ -313,6 +313,7 @@
     <string name="HideChannelBottomButtons">Απόκρυψη κάτω πλήκτρων καναλιού</string>
     <string name="TranslationKeepFormatting">Διατήρηση μορφοποίησης κειμένου στη μετάφραση</string>
     <string name="PredictiveBackAnimation">Πρόβλεψη πίσω εφέ</string>
+    <string name="HideBottomNavigationBar">Απόκρυψη κάτω μπάρας πλοήγησης</string>
     <!-- Accessibility -->
     <string name="AccessibilitySettings">Ρυθμίσεις προσβασιμότητας</string>
 </resources>

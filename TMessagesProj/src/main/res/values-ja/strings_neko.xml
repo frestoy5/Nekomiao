@@ -268,6 +268,8 @@
     <string name="QuickForward">クイック転送メニューを使用</string>
     <string name="DidNotGetTheCodeBlameDurov">別のデバイスでコードを受け取っていない場合、または別のデバイスでTelegramにログインしていない場合は、公式のTelegramアプリを使用してコードを受け取ってください。\n\nTelegramは、**サードパーティアプリでSMSによるログイン機能を無効にしました。**サードパーティアプリにログインしているユーザーは、Telegram経由でのみログイン コードを受信できます。\n\nこれについては弊社ではサポートできません。ログインに関して問題がある場合は、Telegramサポートにお問い合わせください。</string>
     <string name="ChangePhoneNumberBlameDurov">Telegramは、**サードパーティのアプリで電話番号を変更する機能を無効にしました。**ユーザーは Telegramでのみ電話番号を変更できます。</string>
+    <string name="CreatePasskeyBlameDurov">Telegram はサードパーティ製アプリでのパスキー作成には対応していません。ユーザーは Telegram 経由でのみパスキーを作成および使用できます。</string>
+    <string name="OpenOfficialApp">公式アプリを開く</string>
     <string name="NavigationAnimation">ナビゲーションアニメーション</string>
     <string name="NavigationAnimationBezier">クラシック</string>
     <string name="NavigationAnimationSpring">ナチュラル</string>
