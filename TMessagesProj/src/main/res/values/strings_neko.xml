@@ -324,6 +324,7 @@
     <string name="TabsPosition">Tabs position</string>
     <string name="TabsPositionTop">Top</string>
     <string name="TabsPositionBottom">Bottom</string>
+    <string name="StrokeOnViews">Glare effects</string>
 
     <!-- Accessibility -->
     <string name="AccessibilitySettings">Accessibility settings</string>

@@ -38,6 +38,8 @@ public class NekoAppearanceSettingsActivity extends BaseNekoSettingsActivity imp
     private final int tabsTitleTypeRow = rowId++;
     private final int tabsPositionRow = rowId++;
 
+    private final int strokeOnViewsRow = rowId++;
+
     @Override
     public boolean onFragmentCreate() {
         NotificationCenter.getGlobalInstance().addObserver(this, NotificationCenter.emojiLoaded);
@@ -89,6 +91,11 @@ public class NekoAppearanceSettingsActivity extends BaseNekoSettingsActivity imp
         }).slug("tabsTitleType"));
         items.add(TextSettingsCellFactory.of(tabsPositionRow, LocaleController.getString(R.string.TabsPosition), LocaleController.getString(NekoConfig.bottomFilterTabs ? R.string.TabsPositionBottom : R.string.TabsPositionTop)).slug("tabsPosition"));
         items.add(UItem.asShadow(null));
+
+        items.add(UItem.asHeader(LocaleController.getString(R.string.LiteOptionsBlur2)));
+        items.add(UItem.asCheck(strokeOnViewsRow, LocaleController.getString(R.string.StrokeOnViews)).setChecked(NekoConfig.strokeOnViews).slug("strokeOnViews"));
+        items.add(UItem.asShadow(null));
+
     }
 
     @Override
@@ -187,6 +194,11 @@ public class NekoAppearanceSettingsActivity extends BaseNekoSettingsActivity imp
                 listView.adapter.notifyItemChanged(position, PARTIAL);
                 parentLayout.rebuildAllFragmentViews(false, false);
             }, resourcesProvider);
+        } else if (id == strokeOnViewsRow) {
+            NekoConfig.toggleStrokeOnViews();
+            if (view instanceof TextCheckCell) {
+                ((TextCheckCell) view).setChecked(NekoConfig.strokeOnViews);
+            }
         }
     }
 

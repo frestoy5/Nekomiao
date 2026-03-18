@@ -142,6 +142,7 @@ public class NekoConfig {
     public static boolean predictiveBackAnimation = false;
     public static boolean hideBottomNavigationBar = false;
     public static boolean bottomFilterTabs = false;
+    public static boolean strokeOnViews = true;
 
     public static boolean shouldNOTTrustMe = false;
 
@@ -245,6 +246,7 @@ public class NekoConfig {
             predictiveBackAnimation = preferences.getBoolean("predictiveBackAnimation", false);
             hideBottomNavigationBar = preferences.getBoolean("hideBottomNavigationBar", false);
             bottomFilterTabs = preferences.getBoolean("bottomFilterTabs", false);
+            strokeOnViews = preferences.getBoolean("strokeOnViews", true);
 
             LensHelper.checkLensSupportAsync();
             preferences.registerOnSharedPreferenceChangeListener(listener);
@@ -400,6 +402,14 @@ public class NekoConfig {
         SharedPreferences preferences = ApplicationLoader.applicationContext.getSharedPreferences("nekoconfig", Activity.MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putBoolean("bottomFilterTabs", bottomFilterTabs);
+        editor.apply();
+    }
+
+    public static void toggleStrokeOnViews() {
+        strokeOnViews = !strokeOnViews;
+        SharedPreferences preferences = ApplicationLoader.applicationContext.getSharedPreferences("nekoconfig", Activity.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putBoolean("strokeOnViews", strokeOnViews);
         editor.apply();
     }
 
